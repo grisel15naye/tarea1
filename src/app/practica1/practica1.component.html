@@ -1,0 +1,49 @@
+
+<div class="card">
+    <div class="card-header">
+      CONTROL DE ALCOHOLEMIA
+    </div>
+    <div class="card-body">
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" [(ngModel)]="formControl.indicador"
+            id="txtIndicador" placeholder="name@example.com">
+            <label for="txtIndicador">Indique el tipo de vehículo (C, A, T, M)</label>
+        </div>        
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" [(ngModel)]="formControl.tasa"
+            id="txtTasa" placeholder="name@example.com">
+            <label for="txtTasa">Ingrese la tasa de alcohol</label>
+        </div>
+
+        <button type="button" (click)="respuesta()" 
+            class="btn btn-primary">VERIFICAR</button>
+        @if (mostrarMensaje) {
+            <div class="alert alert-primary" role="alert">
+                {{resultado}}
+            </div>}
+
+        <hr/>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Vehículo</th>
+                <th scope="col">Indicador</th>
+                <th scope="col">Tasa</th>
+                <th scope="col">Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+                @for (itemConductor of conductorList; track $index) {
+                <tr>
+                    <td>{{itemConductor.vehiculo}}</td>
+                    <td>{{itemConductor.indicador}}</td>
+                    <td>{{itemConductor.tasa}}</td>
+                    <td>{{itemConductor.respuestAlcolismo}}</td>
+                </tr>}
+            </tbody>
+        </table>
+        
+    </div>
+</div>
