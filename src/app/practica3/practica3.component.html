@@ -1,1 +1,10 @@
-<p>practica3 works!</p>
+<div>
+    <h2>Seleccione un número para obtener el mes</h2>
+    <input type="number" {{ngModel}}="numeroMes" placeholder="Ingrese un número del 1 al 12" />
+    <button (click)="obtenerMes()">Obtener Mes</button>
+  
+    <div *ngIf="nombreMes">
+      <p>El mes correspondiente es: {{ nombreMes }}</p>
+    </div>
+  </div>
+  
