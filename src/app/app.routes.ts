@@ -10,4 +10,3 @@ export const routes: Routes = [
     {path: "a3", component: Practica3Component},
     {path: "a4", component: Practica4Component}
 ];
-
