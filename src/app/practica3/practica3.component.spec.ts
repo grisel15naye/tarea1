@@ -1,23 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
-import { Practica3Component } from './practica3.component';
+@Component({
+  selector: 'TAREA1-MAIN',
+  templateUrl: './practica3.component.html',
+  styleUrls: ['./practica3.component.css']
+})
+export class Practica3Component {
+  numeroMes: number | null = null;
+  nombreMes: string = '';
 
-describe('Practica3Component', () => {
-  let component: Practica3Component;
-  let fixture: ComponentFixture<Practica3Component>;
+  obtenerMes(): void {
+    const meses = [
+      'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+      'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+    ];
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Practica3Component]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(Practica3Component);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    if (this.numeroMes && this.numeroMes >= 1 && this.numeroMes <= 12) {
+      this.nombreMes = meses[this.numeroMes - 1];
+    } else {
+      this.nombreMes = 'Número inválido';
+    }
+  }
+}
