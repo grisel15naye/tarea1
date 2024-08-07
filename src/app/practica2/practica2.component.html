@@ -13,9 +13,9 @@
     <input id="numero2" type="number" [(ngModel)]="numero2">
   </div>
   
-  <button (click)="calcular()" class="btn btn-primary">Calcular</button>
-  @if(mostrarMensaje){
-    <div class="alert alert-primary" role="alert">
+  <button (click)="calcular()">Calcular</button>
+  @if (resultado==null) {
+    <div >
       <p>El resultado de la {{operacion}} es: {{resultado}}</p>
     </div>
   }
