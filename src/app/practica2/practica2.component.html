@@ -1,1 +1,17 @@
-<p>practica2 works!</p>
+<h1>hola</h1>
+<div>
+    <label for="numero1">Ingrese el primer número:</label>
+    <input id="numero1" type="number" [(ngModel)]="numero1">
+  </div>
+  
+  <div>
+    <label for="numero2">Ingrese el segundo número:</label>
+    <input id="numero2" type="number" [(ngModel)]="numero2">
+  </div>
+  
+  <button (click)="calcular()">Calcular</button>
+  
+  <div *ngIf="resultado !== null">
+    <p>El resultado de la {{operacion}} es: {{resultado}}</p>
+  </div>
+  
