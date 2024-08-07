@@ -1,10 +1,22 @@
-<div>
-    <h2>Seleccione un número para obtener el mes</h2>
-    <input type="number" {{ngModel}}="numeroMes" placeholder="Ingrese un número del 1 al 12" />
-    <button (click)="obtenerMes()">Obtener Mes</button>
-  
-    <div *ngIf="nombreMes">
-      <p>El mes correspondiente es: {{nombreMes}}</p>
-    </div>
+<div class="main-content">
+  <div class="card">
+      <div class="card-header">
+          Seleccione un número para obtener el mes
+      </div>
+      <div class="card-body">
+          <div class="form-floating mb-3">
+              <input type="number" class="form-control" [(ngModel)]="numeroMes" id="inputNumeroMes" placeholder="Ingrese un número del 1 al 12">
+              <label for="inputNumeroMes">Ingrese un número del 1 al 12</label>
+          </div>        
+          <button type="button" (click)="obtenerMes()" class="btn btn-primary">Obtener Mes</button>
+          @if (nombreMes) {
+            <div class="alert alert-info mt-3" role="alert">
+              El mes correspondiente es: {{nombreMes}}
+          </div>
+          }
+          
+      </div>
+  </div>
 </div>
+
   

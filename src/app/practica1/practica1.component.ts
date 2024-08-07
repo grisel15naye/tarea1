@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MenuComponent } from "../menu/menu.component";
 
 @Component({
   selector: 'app-practica1',
   standalone: true,
-  imports: [FormsModule, MenuComponent],
+  imports: [FormsModule],
   templateUrl: './practica1.component.html',
   styleUrls: ['./practica1.component.css']
 })

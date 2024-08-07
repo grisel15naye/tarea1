@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Importar CommonModule para directivas como *ngIf
 import { FormsModule } from '@angular/forms';    // Importar FormsModule para ngModel
 
 @Component({
   selector: 'app-practica3',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: './practica3.component.html',
   styleUrl: './practica3.component.css'
 })
