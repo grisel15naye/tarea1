@@ -8,7 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [FormsModule,
             BrowserModule],
   templateUrl: './practica2.component.html',
-  styleUrl: './practica2.component.css'
+  styleUrls: ['./practica2.component.css']
 })
 export class Practica2Component {
   numero1: number | null = null;
