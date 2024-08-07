@@ -3,14 +3,20 @@
         <div class="card-header">
           EJERCICIO 1
         </div>
+        <div class="row justify-content-left mb-4"><div class="col-auto"><img src="/assets/tabla.png" alt="Descripción de la imagen" class="img-fluid"></div></div>
         <div class="card-header">
           CONTROL DE ALCOHOLEMIA
         </div>
         <div class="card-body">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" [(ngModel)]="formControl.indicador"
-                id="txtIndicador" placeholder="name@example.com">
-                <label for="txtIndicador">Indique el tipo de vehículo (C, A, T, M)</label>
+                <select class="form-select" [(ngModel)]="formControl.indicador" id="selectIndicador">
+                    <option value="" disabled selected>Seleccione el tipo de vehículo</option>
+                    <option value="C">C</option>
+                    <option value="A">A</option>
+                    <option value="T">T</option>
+                    <option value="M">M</option>
+                </select>
+                <label for="selectIndicador">Indique el tipo de vehículo (C, A, T, M)</label>
             </div>        
             <div class="form-floating mb-3">
                 <input type="number" class="form-control" [(ngModel)]="formControl.tasa"
@@ -50,5 +56,3 @@
         </div>
     </div>
 </div>
-
-
