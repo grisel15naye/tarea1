@@ -10,8 +10,12 @@
   </div>
   
   <button (click)="calcular()">Calcular</button>
+  @if (resultado==null) {
+    <div >
+      <p>El resultado de la {{operacion}} es: {{resultado}}</p>
+    </div>
+  }
   
-  <div *ngIf="resultado !== null">
-    <p>El resultado de la {{operacion}} es: {{resultado}}</p>
-  </div>
+  
+
   
