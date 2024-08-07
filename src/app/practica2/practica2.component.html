@@ -1,5 +1,9 @@
-<h1>hola</h1>
-<div>
+<div class="card">
+  <div class="card-header">
+    EJERCICIO 2
+  </div>
+  <div class="card-body">
+  <div>
     <label for="numero1">Ingrese el primer número:</label>
     <input id="numero1" type="number" [(ngModel)]="numero1">
   </div>
@@ -9,9 +13,13 @@
     <input id="numero2" type="number" [(ngModel)]="numero2">
   </div>
   
-  <button (click)="calcular()">Calcular</button>
+  <button (click)="calcular()" class="btn btn-primary">Calcular</button>
+  @if(mostrarMensaje){
+    <div class="alert alert-primary" role="alert">
+      <p>El resultado de la {{operacion}} es: {{resultado}}</p>
+    </div>
+  }
   
-  <div *ngIf="resultado !== null">
-    <p>El resultado de la {{operacion}} es: {{resultado}}</p>
-  </div>
+  
+
   

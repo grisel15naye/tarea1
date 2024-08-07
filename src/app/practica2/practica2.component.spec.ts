@@ -11,7 +11,7 @@ describe('Practica2Component', () => {
       imports: [Practica2Component]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(Practica2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,4 +21,3 @@ describe('Practica2Component', () => {
     expect(component).toBeTruthy();
   });
 });
-
