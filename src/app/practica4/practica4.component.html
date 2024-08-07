@@ -1,8 +1,8 @@
-<div class="container mt-4">
-    <h1 class="mb-4">Suma de los dígitos de cada número entre 23 y 99</h1>
-    <div class="list-group">
-      <a *ngFor="let item of numbers" class="list-group-item list-group-item-action">
-        Número: {{ item.number }} - Suma de dígitos: {{ item.digitSum }}
-      </a>
-    </div>
-</div>  
+<div class="container mt-4 center">
+  <h1 class="mb-4">Suma de los dígitos de cada número entre 23 y 99</h1>
+  <ol class="list-group list-group-numbered">
+    <li *ngFor="let item of numbers" class="list-group-item">
+      Número: {{ item.number }} - Suma de dígitos: {{ item.digitSum }}
+    </li>
+  </ol>
+</div>
