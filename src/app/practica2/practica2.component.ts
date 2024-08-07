@@ -13,7 +13,8 @@ export class Practica2Component {
   numero2: number | null = null;
   resultado: number | null = null;
   operacion: string = '';
-  mostrarMensaje= false
+  mostrarmensajes = false
+  
 
   calcular() {
     if (this.numero1 !== null && this.numero2 !== null) {
@@ -29,5 +30,5 @@ export class Practica2Component {
         this.resultado = this.numero1 + this.numero2;
         this.operacion = 'suma';
       }}
-      this.mostrarMensaje=true;
+      this.mostrarmensajes= true;
   }}

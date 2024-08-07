@@ -1,24 +1,35 @@
-<div class="card">
-  <div class="card-header">
-    EJERCICIO 2
-  </div>
-  <div class="card-body">
-  <div>
-    <label for="numero1">Ingrese el primer número:</label>
-    <input id="numero1" type="number" [(ngModel)]="numero1">
-  </div>
-  
-  <div>
-    <label for="numero2">Ingrese el segundo número:</label>
-    <input id="numero2" type="number" [(ngModel)]="numero2">
-  </div>
-  
-  <button (click)="calcular()">Calcular</button>
-  @if (resultado==null) {
-    <div >
-      <p>El resultado de la {{operacion}} es: {{resultado}}</p>
+<div class="main-content">
+  <div class="card">
+    <div class="card-header">
+      EJERCICIO 2
+    </div> 
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="numero1" class="form-label"></label>
+        <input class="form-control" type="number" [(ngModel)]="numero1" placeholder="Ingrese primer valor" id="numero1" aria-label="Disabled input example" >
+      </div>
+      <div class="mb-3">
+        <label for="numero1" class="form-label"></label>
+        <input class="form-control" type="number" [(ngModel)]="numero2" placeholder="Ingrese segundo valor" id="numero2" aria-label="Disabled input example" >
+      </div>   
+      <hr/>  
+    
+      <button type="button" (click)="calcular()" class="btn btn-primary">Calcular</button>  
+      @if (mostrarmensajes) {    
+        <hr/>
+        <div class="alert alert-primary" role="alert">
+          La operacion es: {{operacion}} 
+          <hr/>
+          <hr/>
+          El resultado es: {{resultado}}   
+        </div>  
+      }
     </div>
-  }
+  </div>
+</div>
+
+    
+  
   
   
 
