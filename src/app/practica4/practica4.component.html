@@ -1,11 +1,13 @@
 <div class="container mt-4 center">
-  <div class="card-header">
-    EJERCICIO 4
-  </div> 
-  <h1 class="mb-4">Suma de los dígitos de cada número entre 23 y 99</h1>
-  <ol class="list-group list-group-numbered">
-    <li *ngFor="let item of numbers" class="list-group-item">
-      Número: {{ item.number }} - Suma de dígitos: {{ item.digitSum }}
-    </li>
-  </ol>
+  <div class="card">
+    <div class="card-header">
+      EJERCICIO 4
+    </div>
+    <h1 class="mb-4 text-center"> Suma de los dígitos de cada número entre 23 y 99</h1>
+    <ol class="list-group list-group-numbered">
+      <li *ngFor="let item of numbers" class="list-group-item">
+        Número: {{ item.number }} - Suma de dígitos: {{ item.digitSum }}
+      </li>
+    </ol>
+  </div>  
 </div>
